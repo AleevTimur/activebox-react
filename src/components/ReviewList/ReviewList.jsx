@@ -2,7 +2,7 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { ReviewItem } from "../ReviewItem/ReviewItem";
+import { ReviewItem } from "../ReviewItem";
 
 const reviewsData = [
   {
@@ -18,7 +18,8 @@ const reviewsData = [
     imageUrl: "img/reviews/review-1.jpg",
   },
 ];
-export const Reviews = () => {
+
+export const ReviewList = () => {
   const settings = {
     infinite: true,
     speed: 300,

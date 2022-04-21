@@ -1,13 +1,47 @@
 import React, { useState, useContext } from "react";
-import { useHeaderListener } from "../hooks/useHeaderListener";
+import { useHeaderListener } from "../../hooks/useHeaderListener";
 
-const Intro = () => {
+const navItemsData = [
+  {
+    id: 1,
+    name: "Features",
+    anchor: "#features",
+  },
+  {
+    id: 2,
+    name: "Works",
+    anchor: "#works",
+  },
+  {
+    id: 3,
+    name: "Our team",
+    anchor: "#team",
+  },
+  {
+    id: 4,
+    name: "Testimonials",
+    anchor: "#reviews",
+  },
+  {
+    id: 5,
+    name: "Download",
+    anchor: "#download",
+  },
+];
+
+export const Intro = () => {
   const [isHeaderFixed, introRef] = useHeaderListener();
 
   const [isBurgerOpen, toggleBurger] = useState(false);
   const onToggleBurgerMenu = () => {
     toggleBurger((currentState) => !currentState);
   };
+
+  const navItemElements = navItemsData.map((navItem) => (
+    <a className="nav__link" href={navItem.anchor} key={navItem.id}>
+      {navItem.name}
+    </a>
+  ));
 
   return (
     <>
@@ -19,21 +53,7 @@ const Intro = () => {
             </div>
 
             <nav className={isBurgerOpen ? "nav show" : "nav"}>
-              <a className="nav__link" href="#features">
-                Features
-              </a>
-              <a className="nav__link" href="#works">
-                Works
-              </a>
-              <a className="nav__link" href="#team">
-                Our Team
-              </a>
-              <a className="nav__link" href="#reviews">
-                Testimonials
-              </a>
-              <a className="nav__link" href="#download">
-                Download
-              </a>
+              {navItemElements}
             </nav>
 
             <button
@@ -64,5 +84,3 @@ const Intro = () => {
     </>
   );
 };
-
-export default Intro;

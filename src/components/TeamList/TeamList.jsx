@@ -1,5 +1,5 @@
 import React from "react";
-import TeamItem from "./teamItem";
+import { TeamItem } from "../TeamItem";
 
 const teamData = [
   {
@@ -57,7 +57,7 @@ const teamData = [
   },
 ];
 
-const TeamList = () => {
+export const TeamList = () => {
   return (
     <div className="team" id="team">
       <div className="container">
@@ -78,5 +78,3 @@ const TeamList = () => {
     </div>
   );
 };
-
-export default TeamList;

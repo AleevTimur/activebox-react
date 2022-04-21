@@ -1,6 +1,6 @@
 import React from "react";
 
-const TeamItem = ({ name, profession, description, photo, links }) => {
+export const TeamItem = ({ name, profession, description, photo, links }) => {
   const linksList = links && Object.entries(links);
   const linkElements = linksList.map(([network, link]) => {
     if (link) {
@@ -34,5 +34,3 @@ const TeamItem = ({ name, profession, description, photo, links }) => {
     </div>
   );
 };
-
-export default TeamItem;

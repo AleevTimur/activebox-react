@@ -1,6 +1,6 @@
 import React from "react";
 
-const FeatureItem = ({ title, text, imageUrl }) => {
+export const FeatureItem = ({ title, text, imageUrl }) => {
   return (
     <div className="features__item">
       <img className="features__icon" src={imageUrl} alt={title} />
@@ -9,5 +9,3 @@ const FeatureItem = ({ title, text, imageUrl }) => {
     </div>
   );
 };
-
-export default FeatureItem;

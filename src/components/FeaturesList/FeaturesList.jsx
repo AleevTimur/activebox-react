@@ -1,5 +1,5 @@
 import React from "react";
-import FeatureItem from "./featureItem";
+import { FeatureItem } from "../FeatureItem/FeatureItem";
 const featuresData = [
   {
     id: 1,
@@ -39,7 +39,7 @@ const featuresData = [
   },
 ];
 
-const FeaturesList = () => {
+export const FeaturesList = () => {
   return (
     <div className="container" id="features">
       <div className="features">
@@ -56,5 +56,3 @@ const FeaturesList = () => {
     </div>
   );
 };
-
-export default FeaturesList;

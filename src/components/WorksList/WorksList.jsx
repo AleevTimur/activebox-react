@@ -1,5 +1,5 @@
 import React from "react";
-import WorkItem from "./workItem";
+import { WorkItem } from "../WorkItem/WorkItem";
 
 const worksData = [
   {
@@ -52,7 +52,7 @@ const worksData = [
   },
 ];
 
-const WorksList = () => {
+export const WorksList = () => {
   return (
     <div className="works" id="works">
       {worksData &&
@@ -67,5 +67,3 @@ const WorksList = () => {
     </div>
   );
 };
-
-export default WorksList;

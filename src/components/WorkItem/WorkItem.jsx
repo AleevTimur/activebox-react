@@ -1,6 +1,6 @@
 import React from "react";
 
-const WorkItem = ({ title, text, imageUrl }) => {
+export const WorkItem = ({ title, text, imageUrl }) => {
   return (
     <div className="works__item">
       <img className="works__photo" src={imageUrl} alt={title} />
@@ -11,5 +11,3 @@ const WorkItem = ({ title, text, imageUrl }) => {
     </div>
   );
 };
-
-export default WorkItem;
