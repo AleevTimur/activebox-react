@@ -1,16 +1,23 @@
 import React from "react";
-import "./sprite.svg";
 
 const TeamItem = ({ name, profession, description, photo, links }) => {
-  //   const linksList =
-  //     links &&
-  //     links.map((link) => (
-  //       <a className="social__item" href={`link`} target="_blank" rel="noreferrer">
-  //         <svg className="social__icon">
-  //           <use xlinkHref={`#${link}`} />
-  //         </svg>
-  //       </a>
-  //     ));
+  const linksList = links && Object.entries(links);
+  const linkElements = linksList.map(([network, link]) => {
+    if (link) {
+      return (
+        <a
+          key={link}
+          className="social__item"
+          href={link}
+          target="_blank"
+          rel="noreferrer">
+          {/* <img src={`img/${network}.svg`} alt={network} /> */}
+        </a>
+      );
+    } else {
+      return null;
+    }
+  });
   return (
     <div className="team__item">
       <img className="team__photo" src={photo} alt={name} />
@@ -23,8 +30,7 @@ const TeamItem = ({ name, profession, description, photo, links }) => {
           quis risus eget urna mollis ornare vel eu leo.
         </p>
       </div>
-
-      {/* <div className="social">{linksList}</div> */}
+      <div className="social">{linkElements}</div>
     </div>
   );
 };

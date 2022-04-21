@@ -9,6 +9,12 @@ const teamData = [
     photo: "img/team/team-1.jpg",
     description:
       "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+
+    links: {
+      twitter: "https://twitter.com",
+      facebook: "https://facebook.com",
+      linkedin: "https://linkedin.com",
+    },
   },
   {
     id: 2,
@@ -17,6 +23,11 @@ const teamData = [
     photo: "img/team/team-2.jpg",
     description:
       "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for",
+    links: {
+      twitter: "https://twitter.com",
+      facebook: "https://facebook.com",
+      linkedin: null,
+    },
   },
   {
     id: 3,
@@ -25,6 +36,11 @@ const teamData = [
     photo: "img/team/team-3.jpg",
     description:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    links: {
+      twitter: null,
+      facebook: "https://facebook.com",
+      linkedin: "https://linkedin.com",
+    },
   },
   {
     id: 4,
@@ -33,6 +49,11 @@ const teamData = [
     photo: "img/team/team-4.jpg",
     description:
       "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
+    links: {
+      twitter: "https://twitter.com",
+      facebook: "https://facebook.com",
+      linkedin: "https://linkedin.com",
+    },
   },
 ];
 
@@ -48,6 +69,7 @@ const TeamList = () => {
                 profession={teamItem.profession}
                 photo={teamItem.photo}
                 description={teamItem.description}
+                links={teamItem.links}
                 key={teamItem.id}
               />
             ))}

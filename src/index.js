@@ -1,4 +1,5 @@
 import React from "react";
+import { AnchorProvider } from "react-anchor-navigation";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 
